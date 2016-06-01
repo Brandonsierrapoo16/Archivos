@@ -58,28 +58,31 @@ namespace ConsoleApplication1
 
             textOut.Close();
         }
+
     }
 
-    
 
-    class Program
-    {
-        static void Main(string[] args)
+        class Program
         {
-            //List<Product> productos = new List<Product>();
+            static void Main(string[] args)
+            {
+                List<Product> productos = new List<Product>();
 
-            p.Add(new Product("AAA", "XBOX ONE", 6000.23m));
-            p.Add(new Product("AAB", "PS4", 7000.23m));
-            p.Add(new Product("AAC", "WIIU", 3000.09m));
+                //p.Add(new Product("AAA", "XBOX ONE", 6000.23m));
+               // p.Add(new Product("AAB", "PS4", 7000.23m));
+                //p.Add(new Product("AAC", "WIIU", 3000.09m));
 
-            ProductD8.SaveProducts(p);
 
-            //productos = ProductD8.GetProducts();
+                //ProductD8.SaveProducts(p);
 
-            //foreach (Product p in productos)
+                productos = ProductD8.GetProducts();
+
+                foreach (Product p in productos)
                 Console.WriteLine(p);
 
-            Console.ReadKey();
+                Console.ReadKey();
+            }
         }
+
     }
-}
+
